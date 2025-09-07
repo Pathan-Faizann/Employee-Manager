@@ -31,14 +31,15 @@
 }
 @media (max-width:480px) {
     .f-con{
-                width: 300px;
-                margin-right: 124px;
+        width: 300px;
+        margin-right: 110px;
                 
     }
     .f-con h1{
         font-size: 24px;
-        margin-left: 38%;
+        margin-left: 32%;
         width: 100%;
+        padding-bottom: 9px;
     }
     form{
     width: 300px;
@@ -49,7 +50,7 @@
     }
     .d-btn{
         width: 154px !important ;
-        font-size: 15px;
+        font-size: 13px;
         margin-right: 20px;
     }
     .lab{
