@@ -2,7 +2,7 @@
 import Navbar from "./components/Navbar";
 import Form from "./components/Form"
 import Home from "./components/Home";
-import {createHashRouter,RouterProvider} from "react-router"
+import {createHashRouter,RouterProvider} from "react-router-dom"
 function App() {
 
   const router = createHashRouter([

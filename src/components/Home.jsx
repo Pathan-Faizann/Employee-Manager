@@ -1,27 +1,47 @@
 import React from 'react'
-import { useState,useEffect } from 'react';
-import {useDispatch,useSelector} from 'react-redux'
+import { useState ,useEffect} from 'react';
+// import {useDispatch,useSelector} from 'react-redux'
 import "./Home.css"
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { TiUserDelete } from "react-icons/ti";
-import { remove } from '../Store/DataSlice';
+// import { remove } from '../Store/DataSlice';
 import { FaSearch } from "react-icons/fa";
 
 
 const Home = () => {
-  const dispatch = useDispatch()
-  // const data = useSelector((state)=>state.Data.data)
-  // console.log(data)
+ const [display,setDisplay] = useState([])
+ const [SData,setSdata] = useState([])
+
   
-  const mydata = JSON.parse(localStorage.getItem("data"))|| []
-  // console.log(mydata)
+   useEffect(() => {
+    let mydata = JSON.parse(localStorage.getItem("data")) || [];
+    setDisplay(mydata);
+  }, []);
+ 
+    // setDisplay(mydata)
   const [searchedData,setSearchedData] = useState("")
-  const SData = mydata.filter((item)=>(
+  useEffect(() => {
+    setSdata(display.filter((item)=>(
     item.department.toLowerCase().includes(searchedData.toLowerCase()) ||
     item.name.toLowerCase().includes(searchedData.toLowerCase()) ||
     item.designation.toLowerCase().includes(searchedData.toLowerCase())
-  ))
+  )))
+    
+  }, [searchedData])
+  
+  
+  // useEffect(() => {
+  //  setSdata(Searched)
+  // }, [])
+  
   // console.log(SData)
+  function remove(id){
+    const removedData = display.filter((item)=> item.id !== id)
+    setDisplay(removedData)
+    setSdata(removedData)
+    localStorage.setItem("data",JSON.stringify(removedData));
+  }
+ 
   
   
   
@@ -44,7 +64,7 @@ const Home = () => {
         <th scope='col'>Remove</th>
         </tr>
         </thead>
-      {searchedData.length===0? mydata.map((item)=>(
+      {searchedData.length===0? display.map((item,i)=>(
         <tr key={item.id} className='p-5 fs-5 text-center home-data'>
           <td>{item.id.slice(-4)}</td>
           <td>{item.name}</td>
@@ -52,12 +72,12 @@ const Home = () => {
           <td>{item.designation}</td>
           <td>{item.phone}</td>
           <td>{item.email}</td>
-          <td><button onClick={()=>dispatch(remove(item.id))} className='btn border'><TiUserDelete size={24} /></button></td>
+          <td><button onClick={()=>remove(item.id)} className='btn border'><TiUserDelete size={24} /></button></td>
           
 
         </tr>
         
-      )):SData.length>0? SData.map((item)=>(
+      )):SData.length>0? SData.map((item,i)=>(
         <tr key={item.id} className='p-5 fs-5 text-center home-data'>
           <td>{item.id.slice(-4)}</td>
           <td>{item.name}</td>
@@ -65,7 +85,7 @@ const Home = () => {
           <td>{item.designation}</td>
           <td>{item.phone}</td>
           <td>{item.email}</td>
-          <td><button onClick={()=>dispatch(remove(item.id))} className='btn border'><TiUserDelete size={24} /></button></td>
+          <td><button onClick={()=>remove(item.id)} className='btn border'><TiUserDelete size={24} /></button></td>
           
 
         </tr>
