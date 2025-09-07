@@ -33,18 +33,18 @@
     }
     .nav{
         width: 100vw;
-        padding: 10px !important;
+        padding: 15px !important;
     
     }
     .nav-a{
-        font-size: 13px;
+        font-size: 15px;
         /* border: 1px solid white; */
         padding: 4px !important;
     
     }
     .homee{
-        margin-right: 2px;
-        margin-left: 12px
+        margin-right: 8px;
+        margin-left: 16px
     }
     
 }
