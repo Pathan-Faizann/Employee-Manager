@@ -2,10 +2,10 @@
 import Navbar from "./components/Navbar";
 import Form from "./components/Form"
 import Home from "./components/Home";
-import {createBrowserRouter,RouterProvider} from "react-router"
+import {createHashRouter,RouterProvider} from "react-router"
 function App() {
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path:"/",
       element:<><Navbar/><Home/></>
