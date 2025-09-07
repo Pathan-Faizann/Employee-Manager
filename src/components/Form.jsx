@@ -50,18 +50,18 @@ const Form = () => {
   return (
     <>
     <div className='d-flex justify-content-center '>
-        <div className=' w-50'>
+        <div className=' f-con w-50'>
                 <h1 className='text-center mt-4 mb-3'>Add New Employee</h1>
 
-            <form onSubmit={submit} className='form shadow mt-5 pt-3   '>
+            <form onSubmit={submit} className='form shadow pt-3   '>
               <div className='d-flex mt-3 align-items-center justify-content-center'>
                 <label htmlFor="" className='lab form-label'>Name</label>
                 <input type="text" required className='form-control border  w-50' value={emps.name || ""} name='name' onChange={save} />
                 </div>
                 <div className='d-flex align-items-center justify-content-center mt-3'>
-                 <label htmlFor="" className='form-label lab ' >Department</label>
+                 <label htmlFor="" className='form-label lab dep ' >Department</label>
 <div className="dropdown">
-  <button className="btn border dropdown-toggle" style={{width:"385px"}} type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button className="btn border dropdown-toggle d-btn" style={{width:"385px"}} type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {emps.department || "Select Department "}
   </button>
   <ul className="dropdown-menu w-100 text-center form-ul" aria-labelledby="dropdownMenuButton">
@@ -87,7 +87,7 @@ const Form = () => {
                 <input type="email" required className='form-control border  w-50' value={emps.email || ""} name='email'   onChange={save} />
                  </div>
                  <div className='d-flex justify-content-center my-3'>
-                <button className='btn btn-primary ms-4 my-3' type='submit' onClick={submit}>Submit</button>
+                <button className='btn ms-4 my-3 sub' type='submit' onClick={submit}>Submit</button>
                 </div>
             </form>
             </div>

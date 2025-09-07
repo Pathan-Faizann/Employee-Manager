@@ -2,9 +2,21 @@
     width: 100px;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+    text-align: start !important;
+    margin-right: 10%;
 }
 .form{
     scale: 1.1;
+    margin-top: 8%;
+}
+.sub{
+    background-color: var(--prim);
+    color: white;
+}
+.sub:hover{
+    background-color: rgb(51, 51, 132);
+    color: white;
 }
 .form-ul{
     background-color:rgb(106, 137, 184);
@@ -16,4 +28,48 @@
 .form-li>button{
     color: white;
     font-weight: 500;
+}
+@media (max-width:480px) {
+    .f-con{
+                width: 300px;
+                margin-right: 124px;
+                
+    }
+    .f-con h1{
+        font-size: 24px;
+        margin-left: 38%;
+        width: 100%;
+    }
+    form{
+    width: 300px;
+    margin-right: 80px !important;
+    font-size: 16px;
+        margin-top: 0% !important;
+
+    }
+    .d-btn{
+        width: 154px !important ;
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    .lab{
+        width: 100px;
+        margin-right: 14px;
+        font-size: 16px;
+    }
+    .form-ul{
+        scale: 0.8;
+        margin-top: -10% !important;
+    }
+    form input{
+        margin-right: 20px !important;
+        width: 380px !important;
+        font-size: 14px !important;
+        /* background-color: aqua !important;  */
+
+    }
+    /* .dep{
+
+    } */
+    
 }

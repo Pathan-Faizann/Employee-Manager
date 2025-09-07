@@ -6,3 +6,22 @@
     left: 42%;
     top: 50%;
 }
+@media (max-width:480px) {
+    .home-data{
+        font-size: 16px !important;
+    }
+    th{
+        font-size: 16px;
+    }
+    .s>input{
+        width: 100% !important;
+        padding: 4px !important;
+    }
+    .s{
+        margin-right: 20%;
+    }
+    .s>button{
+        scale: 0.8;
+    }
+    
+}

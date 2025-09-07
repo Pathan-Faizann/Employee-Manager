@@ -27,9 +27,12 @@ const Home = () => {
   
    
   return (
-    <div className='d-flex flex-column justify-content-center align-items-center'>
-      <div className=" w-75 ms-5 d-flex align-items-center" ><button className='btn mt-3'><FaSearch size={25}/></button><input type="text" placeholder='search by name, department or designation' value={searchedData} onChange={(e)=>setSearchedData(e.target.value)} className='form-control w-50 mt-3 border border-dark rounded-pill' /></div>
-      <table className='table table-bordered mt-4 fs-5'>
+    <div className='d-flex flex-column justify-content-center pc align-items-center'>
+      <div className=" w-75 ms-5 d-flex align-items-center s" ><button className='btn mt-3'><FaSearch size={25}/></button><input type="text" placeholder='search by name, department or designation' value={searchedData} onChange={(e)=>setSearchedData(e.target.value)} className='form-control w-50 mt-3 border border-dark rounded-pill' />
+     
+</div>
+      <div className='table-responsive w-100 px-3'>
+      <table className='table table-bordered mt-4 fs-5 tb'>
         <thead>
         <tr className='text-center'>
         <th scope='col'>Id</th>
@@ -70,6 +73,7 @@ const Home = () => {
       )):<h2 className='no'>No Data Found</h2>}
      
       </table>
+      </div>
 
       
     </div>

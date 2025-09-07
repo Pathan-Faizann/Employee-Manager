@@ -38,7 +38,13 @@
     }
     .nav-a{
         font-size: 13px;
+        /* border: 1px solid white; */
+        padding: 4px !important;
     
+    }
+    .homee{
+        margin-right: 2px;
+        margin-left: 12px
     }
     
 }
