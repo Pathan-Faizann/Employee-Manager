@@ -69,7 +69,7 @@ const Home = () => {
    
   return (
     <div className='d-flex flex-column justify-content-center pc align-items-center'>
-      <div className=" w-75 ms-5 d-flex align-items-center s" ><button className='btn mt-3'><FaSearch size={25}/></button><input type="text" placeholder='search by name, department or designation' value={searchedData} onChange={(e)=>setSearchedData(e.target.value)} className='form-control w-50 mt-3 border border-dark rounded-pill' />
+      <div className=" w-75 ms-5 d-flex align-items-center s" ><button className='btn mt-3'><FaSearch size={25}/></button><input type="text" placeholder='search by name, department or designation' value={searchedData} onChange={(e)=>setSearchedData(e.target.value)} className='form-control fs-6 w-50 mt-3 border border-dark rounded-pill' />
      
 </div>
       <div className='table-responsive w-100 px-3'>
@@ -134,7 +134,7 @@ const Home = () => {
         <div className='d-flex align-items-center justify-content-center mt-3'>
                  <label htmlFor="" className='form-label lab dep ' >Department</label>
 <div className="dropdown">
-  <button className="btn border dropdown-toggle d-btn" style={{width:"385px"}} type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button className="btn border dropdown-toggle tg d-btn" style={{width:"385px"}} type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {EditItem.department || "Select Department "}
   </button>
   <ul className="dropdown-menu w-100 text-center form-ul" aria-labelledby="dropdownMenuButton">

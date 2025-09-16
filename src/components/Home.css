@@ -18,7 +18,7 @@
     left: 85%;
     bottom: 92%;
 }
-.dropdown-toggle{
+.tg{
     width: 160px !important;
 }
 @media (max-width:480px) {
@@ -46,7 +46,7 @@
         scale: 1;
         margin-left: 23%;
     }
-    .dropdown-toggle{
+    .tg{
     width: 130px !important;
 }
 .btn-X{

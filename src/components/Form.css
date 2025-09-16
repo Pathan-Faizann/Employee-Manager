@@ -10,6 +10,7 @@
     scale: 1.1;
     margin-top: 8%;
 }
+
 .sub{
     background-color: var(--prim);
     color: white;
@@ -19,14 +20,15 @@
     color: white;
 }
 .form-ul{
-    background-color:rgb(106, 137, 184);
+    background-color:rgb(233, 233, 233);
 }
+
 .form-li{
-        border-bottom: 1px solid rgb(222, 213, 213);
-        color: white;
+        border-bottom: 1px solid rgb(200, 199, 199);
+        color: black;
 }
 .form-li>button{
-    color: white;
+    color: black;
     font-weight: 500;
 }
 @media (max-width:480px) {
@@ -49,7 +51,7 @@
 
     }
     .d-btn{
-        width: 154px !important ;
+        width: 150px !important ;
         font-size: 13px;
         margin-right: 20px;
     }
@@ -66,11 +68,8 @@
         margin-right: 20px !important;
         width: 380px !important;
         font-size: 14px !important;
-        /* background-color: aqua !important;  */
 
     }
-    /* .dep{
-
-    } */
+    
     
 }
