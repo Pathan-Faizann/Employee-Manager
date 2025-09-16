@@ -6,6 +6,21 @@
     left: 42%;
     top: 50%;
 }
+.form-up{
+    position: absolute;
+    top: 23%;
+    background-color: white;
+    padding: 20px;
+    scale: 1.3;
+}
+.btn-X{
+    position: absolute;
+    left: 85%;
+    bottom: 92%;
+}
+.dropdown-toggle{
+    width: 160px !important;
+}
 @media (max-width:480px) {
     .home-data{
         font-size: 16px !important;
@@ -27,5 +42,17 @@
         position: absolute;
         left: 28%;
     }
+    .form-up{
+        scale: 1;
+        margin-left: 23%;
+    }
+    .dropdown-toggle{
+    width: 130px !important;
+}
+.btn-X{
+    position: absolute;
+    left: 84%;
+    bottom: 90%;
+}
     
 }

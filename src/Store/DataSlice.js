@@ -1,7 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 
-const stored =JSON.parse(localStorage.getItem("data"))||[];
+let stored = []
+try {
+  const parsed = JSON.parse(localStorage.getItem("data"))
+  if (Array.isArray(parsed)) {
+    stored = parsed
+  }
+} catch (e) {
+  console.log(e)
+  stored = []
+}
 export const DataSlice = createSlice({
   name: 'Data',
   initialState : {
@@ -12,12 +21,13 @@ export const DataSlice = createSlice({
         state.data = [...state.data,action.payload]
          localStorage.setItem("data",JSON.stringify(state.data))
     },
+    
    
    
   },
 })
 
-// Action creators are generated for each case reducer function
+
 export const {setData} = DataSlice.actions
 
 export default DataSlice.reducer

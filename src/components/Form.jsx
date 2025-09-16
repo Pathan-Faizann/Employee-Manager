@@ -21,11 +21,12 @@ const Form = () => {
     setEmps(()=>({...emps,[e.target.name]:e.target.value}))
   }
   function submit(e){
+          e.preventDefault();
+
     if (!emps.name || !emps.department || !emps.designation || !emps.phone || !emps.email){
       alert("Please fill all the details")
     }
     else if(emps.phone.length === 10 && emps.email.endsWith("@gmail.com")){
-      e.preventDefault();
        
     const FinalEmps={...emps,id:id}
       dispatch(setData(FinalEmps))
@@ -38,9 +39,6 @@ const Form = () => {
        
 
     }
-   
-   
- 
   }
   function selectDepartment(dep){
     setEmps(prev=>({...prev,department:dep}))
@@ -65,12 +63,12 @@ const Form = () => {
     {emps.department || "Select Department "}
   </button>
   <ul className="dropdown-menu w-100 text-center form-ul" aria-labelledby="dropdownMenuButton">
-    <li className='form-li'><button  onClick={() => selectDepartment("Sales")} className="dropdown-item" href="#">Sales</button></li>
-    <li className='form-li'><button  onClick={() => selectDepartment("IT")} className="dropdown-item" href="#">IT</button></li>
-    <li className='form-li'><button  onClick={() => selectDepartment("Finance")} className="dropdown-item" href="#">Finance</button></li>
-    <li className='form-li'><button  onClick={() => selectDepartment("HR")} className="dropdown-item" href="#">HR</button></li>
-    <li className='form-li'><button  onClick={() => selectDepartment("Support")} className="dropdown-item" href="#">Support</button></li>
-    <li className='form-li'><button  onClick={() => selectDepartment("Marketing")} className="dropdown-item" href="#">Marketing</button></li>
+    <li className='form-li'><button type='button'  onClick={() => selectDepartment("Sales")} className="dropdown-item" href="#">Sales</button></li>
+    <li className='form-li'><button type='button'  onClick={() => selectDepartment("IT")} className="dropdown-item" href="#">IT</button></li>
+    <li className='form-li'><button type='button'  onClick={() => selectDepartment("Finance")} className="dropdown-item" href="#">Finance</button></li>
+    <li className='form-li'><button type='button'  onClick={() => selectDepartment("HR")} className="dropdown-item" href="#">HR</button></li>
+    <li className='form-li'><button type='button'  onClick={() => selectDepartment("Support")} className="dropdown-item" href="#">Support</button></li>
+    <li className='form-li'><button type='button'  onClick={() => selectDepartment("Marketing")} className="dropdown-item" href="#">Marketing</button></li>
   </ul>
 </div>                
  </div>
@@ -87,7 +85,7 @@ const Form = () => {
                 <input type="email" required className='form-control border  w-50' value={emps.email || ""} name='email'   onChange={save} />
                  </div>
                  <div className='d-flex justify-content-center my-3'>
-                <button className='btn ms-4 my-3 sub' type='submit' onClick={submit}>Submit</button>
+                <button className='btn ms-4 my-3 sub' type='submit' >Submit</button>
                 </div>
             </form>
             </div>
